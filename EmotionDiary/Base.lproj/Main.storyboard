@@ -1,24 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9KV-qP-dRx">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="EyQ-qt-C3z">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="9KV-qP-dRx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oOj-dO-vpE">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dtq-NC-jjF" kind="relationship" relationship="rootViewController" id="rgy-mQ-KfL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJb-8d-MUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-605" y="-37"/>
+        </scene>
+        <!--감정 다이어리-->
+        <scene sceneID="i5j-zQ-3er">
+            <objects>
+                <viewController id="dtq-NC-jjF" customClass="EmotionDiaryViewController" customModule="EmotionDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwB-iY-GrN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="sjZ-YC-cDx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeL-7a-xMO">
+                                <rect key="frame" x="252" y="234" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="aDx-mz-kH8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqw-vk-3Ie">
+                                <rect key="frame" x="50" y="357" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="WFp-k4-B7V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XR-K6-rAn">
+                                <rect key="frame" x="151" y="357" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="Kfq-Mu-ubI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABy-zW-hbX">
+                                <rect key="frame" x="252" y="357" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="OUM-cs-9Kr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gde-VG-Ggz">
+                                <rect key="frame" x="50" y="480" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="Ihw-3z-j1h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-i7-qdV">
+                                <rect key="frame" x="151" y="480" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="zMc-uw-pR4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-be-aF0">
+                                <rect key="frame" x="252" y="480" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="HVv-wr-dW6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSB-9z-6t2">
+                                <rect key="frame" x="50" y="234" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="Xzd-KS-mwc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-D0-foj" userLabel="loveButton">
+                                <rect key="frame" x="151" y="234" width="90" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="slime1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="dtq-NC-jjF" eventType="touchUpInside" id="0dC-UR-EV0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-sP-AQN">
+                                <rect key="frame" x="56" y="319" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-WI-UG8">
+                                <rect key="frame" x="157" y="319" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-nC-3Dr">
+                                <rect key="frame" x="258" y="319" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-31-w3X">
+                                <rect key="frame" x="258" y="442" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-j2-6no">
+                                <rect key="frame" x="157" y="442" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-IZ-0K7">
+                                <rect key="frame" x="56" y="565" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-mF-BB8">
+                                <rect key="frame" x="157" y="565" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozl-F7-hFY">
+                                <rect key="frame" x="258" y="565" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cX-oa-IZR">
+                                <rect key="frame" x="56" y="442" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdg-93-lPD">
+                                <rect key="frame" x="132" y="694" width="128" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <imageReference key="image" image="trash.fill" catalog="system" symbolScale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="countResetButtonTapped:" destination="dtq-NC-jjF" eventType="touchUpInside" id="GJW-7d-Olg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iGG-Uu-KFi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="감정 다이어리" id="jdU-ZT-Xyx">
+                        <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="nV0-Ca-gb4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="angryButton" destination="Hqw-vk-3Ie" id="TtH-4M-VGI"/>
+                        <outlet property="angryLabel" destination="8cX-oa-IZR" id="fKV-rS-LGZ"/>
+                        <outlet property="boredButton" destination="2XR-K6-rAn" id="kGn-2W-eEK"/>
+                        <outlet property="boredLabel" destination="Ubq-j2-6no" id="OzO-J0-oS7"/>
+                        <outlet property="emotionDiaryBarItem" destination="nV0-Ca-gb4" id="a9n-89-UvD"/>
+                        <outlet property="emotionDiaryNavigationBar" destination="jdU-ZT-Xyx" id="S1n-N2-ghc"/>
+                        <outlet property="emotionDiaryView" destination="sjZ-YC-cDx" id="Hg3-4E-E8h"/>
+                        <outlet property="gloomyButton" destination="ABy-zW-hbX" id="mmP-4u-uOX"/>
+                        <outlet property="gloomyLabel" destination="eq1-31-w3X" id="OlG-d0-467"/>
+                        <outlet property="happinessButton" destination="SSB-9z-6t2" id="7uV-pr-SlQ"/>
+                        <outlet property="happinessLabel" destination="4ij-sP-AQN" id="mt0-BW-bcu"/>
+                        <outlet property="likeButton" destination="JeL-7a-xMO" id="fib-OV-yhc"/>
+                        <outlet property="likeLabel" destination="lIQ-nC-3Dr" id="RDI-mc-5y0"/>
+                        <outlet property="loveButton" destination="LnD-D0-foj" id="L3e-pv-j0Q"/>
+                        <outlet property="loveLabel" destination="EuD-WI-UG8" id="bAP-pe-D2z"/>
+                        <outlet property="panicButton" destination="Gde-VG-Ggz" id="wvi-S1-Q0t"/>
+                        <outlet property="panicLabel" destination="3hw-IZ-0K7" id="64Z-Fg-NmL"/>
+                        <outlet property="resetCountButton" destination="Tdg-93-lPD" id="kly-a5-k3J"/>
+                        <outlet property="sadButton" destination="aa9-be-aF0" id="wCo-Tf-G89"/>
+                        <outlet property="sadLabel" destination="Ozl-F7-hFY" id="fdK-hs-FBh"/>
+                        <outlet property="upsetButton" destination="rhG-i7-qdV" id="dnr-tk-VNs"/>
+                        <outlet property="upsetLabel" destination="fAQ-mF-BB8" id="8JZ-LT-orS"/>
+                        <outletCollection property="emotionLabels" destination="4ij-sP-AQN" collectionClass="NSMutableArray" id="iqR-TY-ggB"/>
+                        <outletCollection property="emotionLabels" destination="EuD-WI-UG8" collectionClass="NSMutableArray" id="h5w-MS-veG"/>
+                        <outletCollection property="emotionLabels" destination="lIQ-nC-3Dr" collectionClass="NSMutableArray" id="Osa-GJ-YUa"/>
+                        <outletCollection property="emotionLabels" destination="8cX-oa-IZR" collectionClass="NSMutableArray" id="QFx-dL-0LQ"/>
+                        <outletCollection property="emotionLabels" destination="Ubq-j2-6no" collectionClass="NSMutableArray" id="3eN-aC-SiL"/>
+                        <outletCollection property="emotionLabels" destination="eq1-31-w3X" collectionClass="NSMutableArray" id="CxK-eN-d01"/>
+                        <outletCollection property="emotionLabels" destination="3hw-IZ-0K7" collectionClass="NSMutableArray" id="Q0X-Eu-NaR"/>
+                        <outletCollection property="emotionLabels" destination="fAQ-mF-BB8" collectionClass="NSMutableArray" id="BcG-Nl-ffx"/>
+                        <outletCollection property="emotionLabels" destination="Ozl-F7-hFY" collectionClass="NSMutableArray" id="OEQ-uh-J6k"/>
+                        <outletCollection property="emotionButtons" destination="SSB-9z-6t2" collectionClass="NSMutableArray" id="Knl-Wt-2Ou"/>
+                        <outletCollection property="emotionButtons" destination="LnD-D0-foj" collectionClass="NSMutableArray" id="Kf2-bz-ybv"/>
+                        <outletCollection property="emotionButtons" destination="JeL-7a-xMO" collectionClass="NSMutableArray" id="XIt-GH-95V"/>
+                        <outletCollection property="emotionButtons" destination="Hqw-vk-3Ie" collectionClass="NSMutableArray" id="q9h-WV-W0E"/>
+                        <outletCollection property="emotionButtons" destination="2XR-K6-rAn" collectionClass="NSMutableArray" id="f7S-gF-Bi0"/>
+                        <outletCollection property="emotionButtons" destination="ABy-zW-hbX" collectionClass="NSMutableArray" id="XBo-JO-a5d"/>
+                        <outletCollection property="emotionButtons" destination="Gde-VG-Ggz" collectionClass="NSMutableArray" id="MyE-R2-0GM"/>
+                        <outletCollection property="emotionButtons" destination="rhG-i7-qdV" collectionClass="NSMutableArray" id="leh-6B-sm0"/>
+                        <outletCollection property="emotionButtons" destination="aa9-be-aF0" collectionClass="NSMutableArray" id="qhh-Kb-Rfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Mq-A1-1Zk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="-37"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="633" height="1125"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="slime1" width="278" height="258"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
