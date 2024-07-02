@@ -87,7 +87,9 @@ final class HealingViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        urlSession.finishTasksAndInvalidate()
+        if (buffer != nil) {
+            urlSession.invalidateAndCancel()
+        }
     }
 }
 
