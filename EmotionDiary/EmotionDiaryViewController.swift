@@ -61,6 +61,11 @@ class EmotionDiaryViewController: UIViewController {
         }
         setEmotionLabelText()
     }
+    
+    @IBAction func healingButtonTapped(_ sender: UIBarButtonItem) {
+        present(HealingViewController(), animated: true, completion: nil)
+//        viewController.modalTransitionStyle = .crossDissolve
+    }
 }
 
 extension EmotionDiaryViewController {

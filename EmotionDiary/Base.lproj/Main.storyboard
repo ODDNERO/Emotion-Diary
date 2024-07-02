@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,6 +17,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oOj-dO-vpE">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="dtq-NC-jjF" kind="relationship" relationship="rootViewController" id="rgy-mQ-KfL"/>
@@ -155,7 +158,6 @@
                                 <rect key="frame" x="258" y="319" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-31-w3X">
@@ -219,6 +221,12 @@
                         <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="nV0-Ca-gb4">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="leaf.fill" catalog="system" id="miY-wt-9RU">
+                            <color key="tintColor" red="0.38795657174144899" green="0.68134469696969702" blue="0.55581519783653144" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="healingButtonTapped:" destination="dtq-NC-jjF" id="EV3-r4-kau"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="angryButton" destination="Hqw-vk-3Ie" id="TtH-4M-VGI"/>
@@ -270,6 +278,7 @@
     </scenes>
     <resources>
         <image name="background" width="633" height="1125"/>
+        <image name="leaf.fill" catalog="system" width="128" height="109"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="slime1" width="278" height="258"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
